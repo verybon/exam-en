@@ -239,6 +239,7 @@
 			background: #bbb;
 		}
 		.wrap-btn-fixed{
+			display: none;
 			position: fixed;
 			bottom: 0;
 			left: 0;
@@ -249,6 +250,8 @@
 			display: block;
 			width: 100%;
 			height: 50px;
+			border: 0 none;
+			border-radius: 0;
 			background: #aaa;
 			color: #fff;
 		}
@@ -474,6 +477,8 @@
 			$( 'html, body' ).scrollTop( 0 );
 			
 			$( this ).attr( 'disabled', 'disabled' );
+			
+			$( '.wrap-btn-fixed' ).show();
 
 		});
 	</script>
