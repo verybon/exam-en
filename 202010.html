@@ -210,9 +210,10 @@
 			border-bottom: .3rem solid #000;
 			font-size: 3.4rem;
 			color: #000;
-			transition: all .3s ease;
+			transition: all .5s ease .1s;
 		}
-		.quiz-a input[type="text"]:focus{
+		.quiz-a input[type="text"]:focus,
+		.quiz-a input[type="text"]:hover{
 			border-color: #09f;
 			outline: 0;
 		}
@@ -233,6 +234,9 @@
 			font-size: 2rem;
 			color: #fff;
 			text-align: center;
+		}
+		.btn-confirm[disabled]{
+			background: #bbb;
 		}
 	</style>
 </head>
