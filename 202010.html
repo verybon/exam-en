@@ -455,6 +455,8 @@
 			$( '#score' ).text( Math.round( (100 / _quiz ) * _num ) );
 
 			$( 'html, body' ).scrollTop( 0 );
+			
+			$( this ).attr( 'disabled', 'disabled' );
 
 		});
 	</script>
