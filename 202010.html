@@ -217,13 +217,10 @@
 			outline: 0;
 		}
 		.quiz-hint{
-			display: none;
-			padding: .5rem 0 0;
+			display: block;
+			padding: .5rem 0;
 			font-size: 1.6rem;
 			color: #f67;
-		}
-		.quiz-hint.act{
-			display: block;
 		}
 		.btn-confirm{
 			display: block;
@@ -432,6 +429,10 @@
 
 			</section>
 			<button type="button" class="btn-confirm">정답제출</button>
+			<div class="btn-wrap">
+				<button type="button" id="btn-refresh">다시 도전</button>
+				<button type="button" id="btn-show">정답 보기</button>
+			</div>
 		</main>
 
 	</div>
@@ -444,6 +445,7 @@
 				var $this = $( this );
 				if( $.trim( $this.attr( 'data-answer' ) ) !== $.trim( $this.val() ) ){
 					$this.closest( '.quiz' ).addClass( 'incorrect' );
+					$this.next( '.quiz-hint' ).text( $this.attr( 'data-answer' ) );
 				} else {
 					$this.closest( '.quiz' ).addClass( 'correct' );
 					_num++;
