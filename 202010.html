@@ -238,6 +238,20 @@
 		.btn-confirm[disabled]{
 			background: #bbb;
 		}
+		.wrap-btn-fixed{
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 5rem;
+		}
+		.btn-refresh{
+			display: block;
+			width: 100%;
+			height: 50px;
+			background: #aaa;
+			color: #fff;
+		}
 	</style>
 </head>
 <body>
@@ -433,9 +447,8 @@
 
 			</section>
 			<button type="button" class="btn-confirm">정답제출</button>
-			<div class="btn-wrap">
-				<button type="button" id="btn-refresh">다시 도전</button>
-				<button type="button" id="btn-show">정답 보기</button>
+			<div class="wrap-btn-fixed">
+				<button type="button" class="btn-refresh" onclick="location.reload(true);">다시 도전</button>
 			</div>
 		</main>
 
