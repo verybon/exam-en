@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>영단테 - 2020.10 영어 단어 테스트</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		html{
+			font-size: 10px;
+			letter-spacing: -.08rem;
+			word-spacing: .06rem;
+		}
+		.page {
+			padding: 12rem 2rem 4rem;
+		}
+		.header{
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 1;
+			width: 100%;
+			color: #09f;
+		}
+		.header h1{
+			position: relative;
+			z-index: 1;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 12rem;
+			padding: 2rem;
+			line-height: 1;;
+		}
+		.header:after{
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(255,255,255,0.65);
+			-webkit-backdrop-filter: saturate(180%) blur(15px);
+			backdrop-filter: saturate(180%) blur(15px);
+			box-shadow: 0 2px 5px rgba(0, 0, 0, .05);
+		}
+		.header h1{
+			font-size: 4rem;
+			font-weight: 200;
+		}
+		.header h1 span{
+			font-size: 1.3rem;
+		}
+		.header .score{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			position: absolute;
+			z-index: 2;
+			top: 1em;
+			right: 2rem;
+			width: 9rem;
+			height: 9rem;
+			border-radius: 8rem;
+			border: 1px solid #e0e0e0;
+			font-size: 1.5rem;
+			line-height: 3rem;
+			text-align: center;
+			box-shadow: 0 0 1.5rem rgba(0,0,0,.2);
+		}
+		.header .score::before{
+			content: "score";
+			display: block;
+			color: #999;
+			line-height: 1.5rem;
+		}
+		.header .score strong{
+			font-size: 2.4em;
+		}
+		.quiz{
+			position: relative;
+			margin-top: 4rem;
+			padding: 2rem;
+			border: .1rem solid rgba(255,255,255,0);
+			border-radius: 2rem;
+			box-shadow: 0 0 3rem rgba(0,0,0,.15);
+		}
+		.quiz.incorrect{
+			border-color: red;
+		}
+		.quiz.incorrect::after{
+			content: "+";
+			position: absolute;
+			top: 2.5rem;
+			left: 1rem;
+			font-size: 10rem;
+			color: red;
+			line-height: 1rem;
+			-webkit-transform: rotate(45deg);
+			transform: rotate(45deg);
+		}
+		.quiz.correct::after{
+			content: "";
+			position: absolute;
+			top: .5rem;
+			left: 1rem;
+			width: 4rem;
+			height: 4rem;
+			border-radius: 50%;
+			border: 1rem solid greenyellow;
+			font-size: 6rem;
+			color: greenyellow;
+			line-height: 1rem;
+		}
+		.quiz-q{
+			position: relative;
+			font-size: 1.7rem;
+		}
+		.quiz-q .item-date{
+			display: block;
+			height:	2.8rem;
+			margin: 0 0 1rem;
+			border-radius: 2rem;
+			font-size: 1.4rem;
+			line-height: 2.8rem;
+		}
+		.quiz .item-date::before{
+			display: inline-block;
+			margin: 0 .5rem 0 0;
+			padding: 0 1rem;
+			background: #e0e0e0;
+			font-weight: 700;
+		}
+		.quiz:nth-child(1) .item-date::before{
+			content: "Q01";
+		}
+		.quiz:nth-child(2) .item-date::before{
+			content: "Q02";
+		}
+		.quiz:nth-child(3) .item-date::before{
+			content: "Q03";
+		}
+		.quiz:nth-child(4) .item-date::before{
+			content: "Q04";
+		}
+		.quiz:nth-child(5) .item-date::before{
+			content: "Q05";
+		}
+		.quiz:nth-child(6) .item-date::before{
+			content: "Q06";
+		}
+		.quiz:nth-child(7) .item-date::before{
+			content: "Q07";
+		}
+		.quiz:nth-child(8) .item-date::before{
+			content: "Q08";
+		}
+		.quiz:nth-child(9) .item-date::before{
+			content: "Q09";
+		}
+		.quiz:nth-child(10) .item-date::before{
+			content: "Q10";
+		}
+		.quiz:nth-child(11) .item-date::before{
+			content: "Q11";
+		}
+		.quiz:nth-child(12) .item-date::before{
+			content: "Q12";
+		}
+		.quiz:nth-child(13) .item-date::before{
+			content: "Q13";
+		}
+		.quiz:nth-child(14) .item-date::before{
+			content: "Q14";
+		}
+		.quiz:nth-child(15) .item-date::before{
+			content: "Q15";
+		}
+		.quiz:nth-child(16) .item-date::before{
+			content: "Q16";
+		}
+		.quiz:nth-child(17) .item-date::before{
+			content: "Q17";
+		}
+		.quiz:nth-child(18) .item-date::before{
+			content: "Q18";
+		}
+		.quiz:nth-child(19) .item-date::before{
+			content: "Q19";
+		}
+		.quiz:nth-child(20) .item-date::before{
+			content: "Q20";
+		}
+		.quiz-a{
+			margin: 5rem 0 0;
+			font-size: 2rem;
+		}
+		.quiz-a input[type="text"]{
+			width: 100%;
+			height: 4.5rem;
+			padding: 1rem 1rem .6rem;
+			border: 0 none;
+			border-radius: 0;
+			border-bottom: .3rem solid #000;
+			font-size: 3.4rem;
+			color: #000;
+			transition: all .5s ease .1s;
+		}
+		.quiz-a input[type="text"]:focus,
+		.quiz-a input[type="text"]:hover{
+			border-color: #09f;
+			outline: 0;
+		}
+		.quiz-hint{
+			display: block;
+			padding: .5rem 0;
+			font-size: 1.6rem;
+			color: #f67;
+		}
+		.btn-confirm{
+			display: block;
+			width: 100%;
+			height: 4.8rem;
+			margin: 4rem 0 2rem;
+			border: 0;
+			border-radius: .3rem;
+			background: #09f;
+			font-size: 2rem;
+			color: #fff;
+			text-align: center;
+		}
+		.btn-confirm[disabled]{
+			margin-top: 0;
+			background: #bbb;
+			color: #eee;
+			opacity: 0;
+		}
+		.wrap-btn-fixed{
+			display: none;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 5rem;
+		}
+		.btn-refresh{
+			display: block;
+			width: 100%;
+			height: 50px;
+			border: 0 none;
+			border-radius: 0;
+			background: #aaa;
+			font-size: 2rem;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<div class="page">
+		<header class="header">
+			<h1>2020년 10월 <br>영단테<span>(10.13~10.30)</span></h1>
+			<div class="score">
+				<span><strong id="score">0</strong>점</span>
+			</div>
+		</header>
+		<main>
+			<section>
+				<dl class="quiz">
+					<dt class="quiz-q"><span class="item-date">10.13(화)</span>작은 목소리로; 코멘트로서; 여러 사람에게는 들리지 않는 코멘트로서; 오프 더 레코드로</dt>
+					<dd class="quiz-a">
+						<input type="text" placeholder="oo oo ooooo" autocomplete="off" data-answer="as an aside" data-hint="">
+						<div class="quiz-hint">
+							as an aside
+						</div>
+					</dd>
+				</dl>
+
+				<dl class="quiz">
+					<dt class="quiz-q"><span class="item-date">10.14(수)</span>[명사] 제외, 배제; 차단; 제외되는 사람; (가능성에 대한) 배제; (비행 학생에 대한) 정학 처분</dt>
+					<dd class="quiz-a">
+						<input type="text" placeholder="ooooooooo" autocomplete="off" data-answer="exclusion" data-hint="">
+						<div class="quiz-hint">
+						</div>
+					</dd>
+				</dl>
+
+				<dl class="quiz">
+					<dt class="quiz-q"><span class="item-date">10.15(목)</span>[동사] 진압하다; (감정을) 가라앉히다</dt>
+					<dd class="quiz-a">
+						<input type="text" placeholder="oooooo" autocomplete="off" data-answer="subdue" data-hint="">
+						<div class="quiz-hint">
+						</div>
+					</dd>
+				</dl>
+
+				<dl class="quiz">
+					<dt class="quiz-q"><span class="item-date">10.15(목)</span>[명사] 업적, 성취한 것; 성취, 달성</dt>
+					<dd class="quiz-a">
+						<input type="text" placeholder="oooooooooooo" autocomplete="off" data-answer="archievement" data-hint="">
+						<div class="quiz-hint">
+						</div>
+					</dd>
+				</dl>
+
+				<dl class="quiz">
+					<dt class="quiz-q"><span class="item-date">10.16(금)</span>[명사] 성과; 성취, 달성</dt>
+					<dd class="quiz-a">
+						<input type="text" placeholder="oooooooooo" autocomplete="off" data-answer="attainment" data-hint="">
+						<div class="quiz-hint">
+						</div>
+					</dd>
+				</dl>
+
+				<dl class="quiz">
+					<dt class="quiz-q"><span class="item-date">10.16(금)</span>[동사] (기체가) 응결되다; 응결시키다; (액체가) 농축되다; (글이나 정보를) 압축하다</dt>
+					<dd class="quiz-a">
+						<input type="text" placeholder="oooooooo" autocomplete="off" data-answer="condense" data-hint="">
+						<div class="quiz-hint">
+						</div>
+					</dd>
+				</dl>
+
+				<dl class="quiz">
+					<dt class="quiz-q"><span class="item-date">10.17(토)</span>[명사] 증서, 증명서; 자격증, 면허증; 자격 [동사] 자격증을 교부하다</dt>
+					<dd class="quiz-a">
+						<input type="text" placeholder="ooooooooooo" autocomplete="off" data-answer="certificate" data-hint="">
+						<div class="quiz-hint">
+						</div>
+					</dd>
+				</dl>
+
+				<dl class="quiz">
+					<dt class="quiz-q"><span class="item-date">10.18(일)</span>...의 바로 맞은편에</dt>
+					<dd class="quiz-a">
+						<input type="text" placeholder="oooooo oooo" autocomplete="off" data-answer="across from" data-hint="">
+						<div class="quiz-hint">
+						</div>
+					</dd>
+				</dl>
+
+				<dl class="quiz">
+					<dt class="quiz-q"><span class="item-date">10.19(월)</span>[형용사] 원형의, 둥근; 순회하는 [명사] 회람용 편지; (다수에게 나눠주는) 광고 전단</dt>
+					<dd class="quiz-a">
+						<input type="text" placeholder="oooooooo" autocomplete="off" data-answer="circular" data-hint="">
+						<div class="quiz-hint">
+						</div>
+					</dd>
+				</dl>
+
+				<dl class="quiz">
+					<dt class="quiz-q"><span class="item-date">10.20(화)</span>[동사] (크기,양,범위 등을) 제한하다; (자유로운 움직임을) 방해하다; (규칙,법으로) 제한하다; (섭취하는 기호품의 양, 특정 행동 등을) 제한하다</dt>
+					<dd class="quiz-a">
+						<input type="text" placeholder="oooooooo" autocomplete="off" data-answer="restrict"" data-hint="">
+						<div class="quiz-hint">
+						</div>
+					</dd>
+				</dl>
+
+				<dl class="quiz">
+					<dt class="quiz-q"><span class="item-date">10.21(수)</span>[동사] (자연스런 화학 작용에 의해) 분해되다; (더 작은 부분들로) 분해하다</dt>
+					<dd class="quiz-a">
+						<input type="text" placeholder="ooooooooo" autocomplete="off" data-answer="decompose"" data-hint="">
+						<div class="quiz-hint">
+						</div>
+					</dd>
+				</dl>
+
+				<dl class="quiz">
+					<dt class="quiz-q"><span class="item-date">10.23(금)</span>[명사] (차량 통행이 허용되지 않는 시내 상업) 구역; 선거구; (경찰) 관할구; 관할 경찰서; (어떤 장소, 건물 주변의, 보통 담으로 둘러싸인) 구내, 경내</dt>
+					<dd class="quiz-a">
+						<input type="text" placeholder="oooooooo" autocomplete="off" data-answer="precinct" data-hint="">
+						<div class="quiz-hint">
+						</div>
+					</dd>
+				</dl>
+
+				<dl class="quiz">
+					<dt class="quiz-q"><span class="item-date">10.24(토)</span>몸을/~을 말리다</dt>
+					<dd class="quiz-a">
+						<input type="text" placeholder="ooo ooo" autocomplete="off" data-answer="dry off" data-hint="">
+						<div class="quiz-hint">
+						</div>
+					</dd>
+				</dl>
+
+				<dl class="quiz">
+					<dt class="quiz-q"><span class="item-date">10.24(토)</span>[명사] 동기, 이유 [형용사] 움직이게 하는, 원동력이 되는</dt>
+					<dd class="quiz-a">
+						<input type="text" placeholder="oooooo" autocomplete="off" data-answer="motive" data-hint="">
+						<div class="quiz-hint">
+						</div>
+					</dd>
+				</dl>
+
+				<dl class="quiz">
+					<dt class="quiz-q"><span class="item-date">10.25(일)</span>[동사] (사실임을 강하게) 주장하다; (단호하게) 자기주장을 하다; (자신의 권리, 권위 등을) 확고히 하다; 발휘되기 시작하다</dt>
+					<dd class="quiz-a">
+						<input type="text" placeholder="oooooo" autocomplete="off" data-answer="assert" data-hint="">
+						<div class="quiz-hint">
+						</div>
+					</dd>
+				</dl>
+
+				<dl class="quiz">
+					<dt class="quiz-q"><span class="item-date">10.26(월)</span>[명사] 질투(심), 시샘; 질투심을 드러내는 행동</dt>
+					<dd class="quiz-a">
+						<input type="text" placeholder="ooooooooo" autocomplete="off" data-answer="jealousy" data-hint="">
+						<div class="quiz-hint">
+						</div>
+					</dd>
+				</dl>
+
+				<dl class="quiz">
+					<dt class="quiz-q"><span class="item-date">10.27(화)</span>자동차로 오다 [값 따위]를 끌어올리다</dt>
+					<dd class="quiz-a">
+						<input type="text" placeholder="ooooo oo" autocomplete="off" data-answer="drive up" data-hint="">
+						<div class="quiz-hint">
+						</div>
+					</dd>
+				</dl>
+
+				<dl class="quiz">
+					<dt class="quiz-q"><span class="item-date">10.28(수)</span>[동사] (남이 원치 않거나 가서는 안 될 곳에) 자기 마음대로 가다; 방해하다</dt>
+					<dd class="quiz-a">
+						<input type="text" placeholder="ooooooo" autocomplete="off" data-answer="intrude" data-hint="">
+						<div class="quiz-hint">
+						</div>
+					</dd>
+				</dl>
+
+				<dl class="quiz">
+					<dt class="quiz-q"><span class="item-date">10.29(목)</span>[명사] 거리; (공간상시간상으로 떨어진) 거리 [동사] (~에) 관여하지 않다</dt>
+					<dd class="quiz-a">
+						<input type="text" placeholder="oooooooo" autocomplete="off" data-answer="distance" data-hint="">
+						<div class="quiz-hint">
+						</div>
+					</dd>
+				</dl>
+
+				<dl class="quiz">
+					<dt class="quiz-q"><span class="item-date">10.30(금)</span>[형용사] (고려판단이) 비교상의, 상대적인; (...과) 관련지은, (...에) 따라서 본 [명사] 친천; 동족, 동류</dt>
+					<dd class="quiz-a">
+						<input type="text" placeholder="oooooooo" autocomplete="off" data-answer="relative" data-hint="">
+						<div class="quiz-hint">
+						</div>
+					</dd>
+				</dl>
+
+			</section>
+			<button type="button" class="btn-confirm">정답제출</button>
+			<div class="wrap-btn-fixed">
+				<button type="button" class="btn-refresh" onclick="location.reload(true);">다시 도전</button>
+			</div>
+		</main>
+
+	</div>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script>
+		$( '.btn-confirm' ).on('click', function(){
+			var _num = 0,
+				_quiz = $( '.quiz' ).length;
+			$( '.quiz-a input:text' ).each(function(){
+				var $this = $( this );
+				if( $.trim( $this.attr( 'data-answer' ) ) !== $.trim( $this.val() ) ){
+					$this.closest( '.quiz' ).addClass( 'incorrect' );
+					$this.next( '.quiz-hint' ).text( $this.attr( 'data-answer' ) );
+				} else {
+					$this.closest( '.quiz' ).addClass( 'correct' );
+					_num++;
+				}
+			});
+
+			$( '#score' ).text( Math.round( (100 / _quiz ) * _num ) );
+
+			$( 'html, body' ).scrollTop( 0 );
+			
+			$( this ).attr( 'disabled', 'disabled' );
+			
+			$( '.wrap-btn-fixed' ).show();
+
+		});
+	</script>
+</body>
+</html>
