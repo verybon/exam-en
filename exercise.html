@@ -742,7 +742,7 @@
 		$( '.i-blank' ).on('click', function(){
 			var $thisParent = $( this ).closest( '.quiz' ),
 				$tg = $thisParent.find( '.item-translate' ),
-				$ph = $thisParent.find( '.quiz-a input[type="text"]' ).attr( 'data-answer' ),
+				$ph = maskingName( $thisParent.find( '.quiz-a input[type="text"]' ).attr( 'data-answer' ) ),
 				$ip = $thisParent.find( '.quiz-a input[type="text"]' );
 			/* 포커스주기 */
 			$thisParent.find( '.quiz-a input[type="text"]' ).focus();
