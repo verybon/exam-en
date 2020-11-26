@@ -319,14 +319,25 @@
 		.wrap-btn-fixed.act{
 			display: flex;
 		}
+		.btn-nav,
 		.btn-refresh{
-			display: block;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			width: 100%;
 			height: 50px;
 			border: 0 none;
 			border-radius: 0;
-			background: #aaa;
-			font-size: 2rem;
+			font-size: 1.8rem;
+			text-align: center;
+			text-decoration: none;
+		}
+		.btn-nav{
+			background: #111;
+			color: #fff;
+		}
+		.btn-refresh{
+			background: #777;
 			color: #fff;
 		}
 	</style>
@@ -334,7 +345,7 @@
 <body>
 	<div class="page">
 		<header class="header">
-			<h1>2020년 11월 <br>영단테<span>(10.31~11.26)</span></h1>
+			<h1>2020년 11월 <br>영단테<span>(10.31~11.26 / 총<span id="q-len"></span>문제)</span></h1>
 			<div class="score">
 				<span><strong id="score">0</strong>점</span>
 			</div>
@@ -670,7 +681,7 @@
 			</section>
 			<button type="button" class="btn-confirm">정답제출</button>
 			<div class="wrap-btn-fixed">
-				<a href="2010.html">이전 보기</a>
+				<a href="2010.html" class="btn-nav">이전 테스트로 가기</a>
 				<button type="button" class="btn-refresh" onclick="location.reload(true);">다시 도전</button>
 			</div>
 		</main>
@@ -743,6 +754,10 @@
 		});
 
 	});
+
+	$(document).ready(function(){
+		$( '#q-len' ).text( $( '.quiz' ).length );
+	})
 	</script>
 </body>
 </html>
