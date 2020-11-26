@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>영단테 - 2020.10 영어 단어 테스트</title>
+	<title>영단테 - 2020.11 영어 단어 테스트</title>
 	<style>
 		* {
 			margin: 0;
@@ -120,7 +120,7 @@
 		}
 		.quiz-q{
 			position: relative;
-			font-size: 1.7rem;
+			font-size: 1.8rem;
 		}
 		.quiz-q .item-date{
 			display: block;
@@ -137,6 +137,7 @@
 			background: #e0e0e0;
 			font-weight: 700;
 		}
+
 		.quiz:nth-child(1) .item-date::before{
 			content: "Q01";
 		}
@@ -197,8 +198,55 @@
 		.quiz:nth-child(20) .item-date::before{
 			content: "Q20";
 		}
+		.quiz:nth-child(21) .item-date::before{
+			content: "Q21";
+		}
+		.quiz:nth-child(22) .item-date::before{
+			content: "Q22";
+		}
+		.quiz:nth-child(23) .item-date::before{
+			content: "Q23";
+		}
+		.quiz:nth-child(24) .item-date::before{
+			content: "Q24";
+		}
+		.quiz:nth-child(25) .item-date::before{
+			content: "Q25";
+		}
+		.quiz:nth-child(26) .item-date::before{
+			content: "Q26";
+		}
+		.quiz:nth-child(27) .item-date::before{
+			content: "Q27";
+		}
+		.quiz:nth-child(28) .item-date::before{
+			content: "Q28";
+		}
+		.quiz:nth-child(29) .item-date::before{
+			content: "Q29";
+		}
+		.quiz:nth-child(30) .item-date::before{
+			content: "Q30";
+		}
+		.quiz .item-translate{
+			min-height: 4.8rem;
+			margin: 2rem 0 0;
+			font-size: 1.5rem;
+			opacity: 0;
+			transition: all .2s ease-out;
+		}
+		.quiz .i-blank{
+			display: inline-block;
+			width: 7rem;
+			height: 3.2rem;
+			margin: 0 .2rem;
+			border: 1px solid #09f;
+			border-radius: 0;
+			background: #fff;
+			vertical-align: middle;
+		}
 		.quiz-a{
-			margin: 5rem 0 0;
+			margin: 3rem 0 0;
 			font-size: 2rem;
 		}
 		.quiz-a input[type="text"]{
@@ -208,14 +256,24 @@
 			border: 0 none;
 			border-radius: 0;
 			border-bottom: .3rem solid #000;
-			font-size: 3.4rem;
+			font-size: 3rem;
 			color: #000;
-			transition: all .5s ease .1s;
+			transition: all .4s ease .1s;
 		}
 		.quiz-a input[type="text"]:focus,
 		.quiz-a input[type="text"]:hover{
 			border-color: #09f;
 			outline: 0;
+		}
+		.quiz-a input[type="text"]::-webkit-input-placeholder{
+			font-weight: 700;
+			font-size: 1.7rem;
+			color: #777;
+		}
+		.quiz-a input[type="text"]::placeholder{
+			font-weight: 700;
+			font-size: 1.7rem;
+			color: #777;
 		}
 		.quiz-hint{
 			display: block;
@@ -264,7 +322,7 @@
 <body>
 	<div class="page">
 		<header class="header">
-			<h1>2020년 10월 <br>영단테<span>(10.13~10.30)</span></h1>
+			<h1>2020년 11월 <br>영단테<span>(10.31~11.27)</span></h1>
 			<div class="score">
 				<span><strong id="score">0</strong>점</span>
 			</div>
@@ -272,185 +330,330 @@
 		<main>
 			<section>
 				<dl class="quiz">
-					<dt class="quiz-q"><span class="item-date">10.13(화)</span>작은 목소리로; 코멘트로서; 여러 사람에게는 들리지 않는 코멘트로서; 오프 더 레코드로</dt>
+					<dt class="quiz-q">
+						<span class="item-date">10.31(토)</span>
+						The train went slower and slower until it stopped <button type="button" class="i-blank" aria-label="해석 힌트 보기"></button>.
+						<div class="item-translate">기차가 점점 느려지더니 완전히 멈췄다.</div>
+					</dt>
 					<dd class="quiz-a">
-						<input type="text" placeholder="oo oo ooooo" autocomplete="off" data-answer="as an aside" data-hint="">
-						<div class="quiz-hint">
-							as an aside
-						</div>
-					</dd>
-				</dl>
-
-				<dl class="quiz">
-					<dt class="quiz-q"><span class="item-date">10.14(수)</span>[명사] 제외, 배제; 차단; 제외되는 사람; (가능성에 대한) 배제; (비행 학생에 대한) 정학 처분</dt>
-					<dd class="quiz-a">
-						<input type="text" placeholder="ooooooooo" autocomplete="off" data-answer="exclusion" data-hint="">
+						<input type="text" placeholder="" autocomplete="off" data-answer="altogether" data-hint="">
 						<div class="quiz-hint">
 						</div>
 					</dd>
 				</dl>
 
 				<dl class="quiz">
-					<dt class="quiz-q"><span class="item-date">10.15(목)</span>[동사] 진압하다; (감정을) 가라앉히다</dt>
+					<dt class="quiz-q"><span class="item-date">11.01(일)</span>
+						A lack of oxygen may <button type="button" class="i-blank" aria-label="해석 힌트 보기"></button> brain development in the unborn child.
+						<div class="item-translate">산소 부족이 태아의 두뇌 발달을 저해할 수도 있다.</div>
+					</dt>
 					<dd class="quiz-a">
-						<input type="text" placeholder="oooooo" autocomplete="off" data-answer="subdue" data-hint="">
+						<input type="text" placeholder="" autocomplete="off" data-answer="inhibit" data-hint="">
 						<div class="quiz-hint">
 						</div>
 					</dd>
 				</dl>
 
 				<dl class="quiz">
-					<dt class="quiz-q"><span class="item-date">10.15(목)</span>[명사] 업적, 성취한 것; 성취, 달성</dt>
+					<dt class="quiz-q"><span class="item-date">11.02(월)</span>
+						He admired his  <button type="button" class="i-blank" aria-label="해석 힌트 보기"></button>  in the mirror.
+						<div class="item-translate">그는 거울 속에 비친 자기 모습에 감탄했다.</div>
+					</dt>
 					<dd class="quiz-a">
-						<input type="text" placeholder="oooooooooooo" autocomplete="off" data-answer="archievement" data-hint="">
+						<input type="text" placeholder="" autocomplete="off" data-answer="reflection" data-hint="">
 						<div class="quiz-hint">
 						</div>
 					</dd>
 				</dl>
 
 				<dl class="quiz">
-					<dt class="quiz-q"><span class="item-date">10.16(금)</span>[명사] 성과; 성취, 달성</dt>
+					<dt class="quiz-q"><span class="item-date">11.03(화)</span>
+						The desk has a secret <button type="button" class="i-blank" aria-label="해석 힌트 보기"></button>.
+						<div class="item-translate">그 책상에는 비밀 서랍 칸이 있다.</div>
+					</dt>
 					<dd class="quiz-a">
-						<input type="text" placeholder="oooooooooo" autocomplete="off" data-answer="attainment" data-hint="">
+						<input type="text" placeholder="" autocomplete="off" data-answer="compartment" data-hint="">
 						<div class="quiz-hint">
 						</div>
 					</dd>
 				</dl>
 
 				<dl class="quiz">
-					<dt class="quiz-q"><span class="item-date">10.16(금)</span>[동사] (기체가) 응결되다; 응결시키다; (액체가) 농축되다; (글이나 정보를) 압축하다</dt>
+					<dt class="quiz-q"><span class="item-date">11.04(수)</span>
+						a <button type="button" class="i-blank" aria-label="해석 힌트 보기"></button> for chicken soup
+						<div class="item-translate">닭고기 수프 요리법</div>
+					</dt>
 					<dd class="quiz-a">
-						<input type="text" placeholder="oooooooo" autocomplete="off" data-answer="condense" data-hint="">
+						<input type="text" placeholder="" autocomplete="off" data-answer="recipe" data-hint="">
 						<div class="quiz-hint">
 						</div>
 					</dd>
 				</dl>
 
 				<dl class="quiz">
-					<dt class="quiz-q"><span class="item-date">10.17(토)</span>[명사] 증서, 증명서; 자격증, 면허증; 자격 [동사] 자격증을 교부하다</dt>
+					<dt class="quiz-q"><span class="item-date">11.05(목)</span>
+						[V] I find it very hard to <button type="button" class="i-blank" aria-label="해석 힌트 보기"></button> with him.
+						<div class="item-translate">나는 그를 동정하기가 몹시 힘들다.[also V speech]</div>
+					</dt>
 					<dd class="quiz-a">
-						<input type="text" placeholder="ooooooooooo" autocomplete="off" data-answer="certificate" data-hint="">
+						<input type="text" placeholder="" autocomplete="off" data-answer="sympathize" data-hint="">
 						<div class="quiz-hint">
 						</div>
 					</dd>
 				</dl>
 
 				<dl class="quiz">
-					<dt class="quiz-q"><span class="item-date">10.18(일)</span>...의 바로 맞은편에</dt>
+					<dt class="quiz-q"><span class="item-date">11.06(금)</span>
+						They each received a <button type="button" class="i-blank" aria-label="해석 힌트 보기"></button> of $5,000.
+						<div class="item-translate">나는 그를 동정하기가 몹시 힘들다.[also V speech]</div>
+					</dt>
 					<dd class="quiz-a">
-						<input type="text" placeholder="oooooo oooo" autocomplete="off" data-answer="across from" data-hint="">
+						<input type="text" placeholder="" autocomplete="off" data-answer="legacy" data-hint="">
 						<div class="quiz-hint">
 						</div>
 					</dd>
 				</dl>
 
 				<dl class="quiz">
-					<dt class="quiz-q"><span class="item-date">10.19(월)</span>[형용사] 원형의, 둥근; 순회하는 [명사] 회람용 편지; (다수에게 나눠주는) 광고 전단</dt>
+					<dt class="quiz-q"><span class="item-date">11.07(토)</span>
+						to apply for/take out/pay off a  <button type="button" class="i-blank" aria-label="해석 힌트 보기"></button>
+						<div class="item-translate">담보 대출을 신청하다/내다[받다]/다 갚다</div>
+					</dt>
 					<dd class="quiz-a">
-						<input type="text" placeholder="oooooooo" autocomplete="off" data-answer="circular" data-hint="">
+						<input type="text" placeholder="" autocomplete="off" data-answer="mortgage" data-hint="">
 						<div class="quiz-hint">
 						</div>
 					</dd>
 				</dl>
 
 				<dl class="quiz">
-					<dt class="quiz-q"><span class="item-date">10.20(화)</span>[동사] (크기,양,범위 등을) 제한하다; (자유로운 움직임을) 방해하다; (규칙,법으로) 제한하다; (섭취하는 기호품의 양, 특정 행동 등을) 제한하다</dt>
+					<dt class="quiz-q"><span class="item-date">11.08(일)</span>
+						Which journals does the library <button type="button" class="i-blank" aria-label="해석 힌트 보기"></button> to?
+						<div class="item-translate">이 도서관에서는 어떤 저널들을 구독하나요?</div>
+					</dt>
 					<dd class="quiz-a">
-						<input type="text" placeholder="oooooooo" autocomplete="off" data-answer="restrict"" data-hint="">
+						<input type="text" placeholder="" autocomplete="off" data-answer="subscribe" data-hint="">
 						<div class="quiz-hint">
 						</div>
 					</dd>
 				</dl>
 
 				<dl class="quiz">
-					<dt class="quiz-q"><span class="item-date">10.21(수)</span>[동사] (자연스런 화학 작용에 의해) 분해되다; (더 작은 부분들로) 분해하다</dt>
+					<dt class="quiz-q"><span class="item-date">11.09(월)</span>
+						He could not conceal his <button type="button" class="i-blank" aria-label="해석 힌트 보기"></button> at being interrupted.
+						<div class="item-translate">그는 방해를 받아 짜증스러운 걸 숨길 수가 없었다.</div>
+					</dt>
 					<dd class="quiz-a">
-						<input type="text" placeholder="ooooooooo" autocomplete="off" data-answer="decompose"" data-hint="">
+						<input type="text" placeholder="" autocomplete="off" data-answer="annoyance" data-hint="">
 						<div class="quiz-hint">
 						</div>
 					</dd>
 				</dl>
 
 				<dl class="quiz">
-					<dt class="quiz-q"><span class="item-date">10.23(금)</span>[명사] (차량 통행이 허용되지 않는 시내 상업) 구역; 선거구; (경찰) 관할구; 관할 경찰서; (어떤 장소, 건물 주변의, 보통 담으로 둘러싸인) 구내, 경내</dt>
+					<dt class="quiz-q"><span class="item-date">11.10(화)</span>
+						Tall trees <button type="button" class="i-blank" aria-label="해석 힌트 보기"></button> the lake.
+						<div class="item-translate">키 큰 나무들이 호수를 둘러싸고 있다.</div>
+					</dt>
 					<dd class="quiz-a">
-						<input type="text" placeholder="oooooooo" autocomplete="off" data-answer="precinct" data-hint="">
+						<input type="text" placeholder="" autocomplete="off" data-answer="surround" data-hint="">
 						<div class="quiz-hint">
 						</div>
 					</dd>
 				</dl>
 
 				<dl class="quiz">
-					<dt class="quiz-q"><span class="item-date">10.24(토)</span>몸을/~을 말리다</dt>
+					<dt class="quiz-q"><span class="item-date">11.11(수)</span>
+						I was not <button type="button" class="i-blank" aria-label="해석 힌트 보기"></button> for all the problems it caused.
+						<div class="item-translate">나는 그것이 야기한 그 모든 문제들에 대해 준비가 되어 있지 않았다.</div>
+					</dt>
 					<dd class="quiz-a">
-						<input type="text" placeholder="ooo ooo" autocomplete="off" data-answer="dry off" data-hint="">
+						<input type="text" placeholder="" autocomplete="off" data-answer="prepared" data-hint="">
 						<div class="quiz-hint">
 						</div>
 					</dd>
 				</dl>
 
 				<dl class="quiz">
-					<dt class="quiz-q"><span class="item-date">10.24(토)</span>[명사] 동기, 이유 [형용사] 움직이게 하는, 원동력이 되는</dt>
+					<dt class="quiz-q"><span class="item-date">11.12(목)</span>
+						a <button type="button" class="i-blank" aria-label="해석 힌트 보기"></button> act of vandalism
+						<div class="item-translate">고의적인 공공 기물 파손 행위</div>
+					</dt>
 					<dd class="quiz-a">
-						<input type="text" placeholder="oooooo" autocomplete="off" data-answer="motive" data-hint="">
+						<input type="text" placeholder="" autocomplete="off" data-answer="deliberate" data-hint="">
 						<div class="quiz-hint">
 						</div>
 					</dd>
 				</dl>
 
 				<dl class="quiz">
-					<dt class="quiz-q"><span class="item-date">10.25(일)</span>[동사] (사실임을 강하게) 주장하다; (단호하게) 자기주장을 하다; (자신의 권리, 권위 등을) 확고히 하다; 발휘되기 시작하다</dt>
+					<dt class="quiz-q"><span class="item-date">11.13(금)</span>
+						The court will make its <button type="button" class="i-blank" aria-label="해석 힌트 보기"></button> on the case next week.
+						<div class="item-translate">법원이 다음주에 그 사건에 대한 결정을 내릴 것이다.</div>
+					</dt>
 					<dd class="quiz-a">
-						<input type="text" placeholder="oooooo" autocomplete="off" data-answer="assert" data-hint="">
+						<input type="text" placeholder="" autocomplete="off" data-answer="ruling" data-hint="">
 						<div class="quiz-hint">
 						</div>
 					</dd>
 				</dl>
 
 				<dl class="quiz">
-					<dt class="quiz-q"><span class="item-date">10.26(월)</span>[명사] 질투(심), 시샘; 질투심을 드러내는 행동</dt>
+					<dt class="quiz-q"><span class="item-date">11.14(토)</span>
+						He often plays the part of the <button type="button" class="i-blank" aria-label="해석 힌트 보기"></button>.
+						<div class="item-translate">그는 자주 악당 역할[악역]을 연기한다.</div>
+					</dt>
 					<dd class="quiz-a">
-						<input type="text" placeholder="ooooooooo" autocomplete="off" data-answer="jealousy" data-hint="">
+						<input type="text" placeholder="" autocomplete="off" data-answer="villain" data-hint="">
 						<div class="quiz-hint">
 						</div>
 					</dd>
 				</dl>
 
 				<dl class="quiz">
-					<dt class="quiz-q"><span class="item-date">10.27(화)</span>자동차로 오다 [값 따위]를 끌어올리다</dt>
+					<dt class="quiz-q"><span class="item-date">11.15(일)</span>
+						His <button type="button" class="i-blank" aria-label="해석 힌트 보기"></button> to his wife and family is touching.
+						<div class="item-translate">아내와 가족에 대한 그의 헌신은 감동적이다.</div>
+					</dt>
 					<dd class="quiz-a">
-						<input type="text" placeholder="ooooo oo" autocomplete="off" data-answer="drive up" data-hint="">
+						<input type="text" placeholder="" autocomplete="off" data-answer="devotion" data-hint="">
 						<div class="quiz-hint">
 						</div>
 					</dd>
 				</dl>
 
 				<dl class="quiz">
-					<dt class="quiz-q"><span class="item-date">10.28(수)</span>[동사] (남이 원치 않거나 가서는 안 될 곳에) 자기 마음대로 가다; 방해하다</dt>
+					<dt class="quiz-q"><span class="item-date">11.16(월)</span>
+						an <button type="button" class="i-blank" aria-label="해석 힌트 보기"></button> reply
+						<div class="item-translate">불분명한 대답</div>
+					</dt>
 					<dd class="quiz-a">
-						<input type="text" placeholder="ooooooo" autocomplete="off" data-answer="intrude" data-hint="">
+						<input type="text" placeholder="" autocomplete="off" data-answer="inarticulate" data-hint="">
 						<div class="quiz-hint">
 						</div>
 					</dd>
 				</dl>
 
 				<dl class="quiz">
-					<dt class="quiz-q"><span class="item-date">10.29(목)</span>[명사] 거리; (공간상시간상으로 떨어진) 거리 [동사] (~에) 관여하지 않다</dt>
+					<dt class="quiz-q"><span class="item-date">11.17(화)</span>
+						a global <button type="button" class="i-blank" aria-label="해석 힌트 보기"></button>
+						<div class="item-translate">범세계적인 관점[시각]</div>
+					</dt>
 					<dd class="quiz-a">
-						<input type="text" placeholder="oooooooo" autocomplete="off" data-answer="distance" data-hint="">
+						<input type="text" placeholder="" autocomplete="off" data-answer="perspective" data-hint="">
 						<div class="quiz-hint">
 						</div>
 					</dd>
 				</dl>
 
 				<dl class="quiz">
-					<dt class="quiz-q"><span class="item-date">10.30(금)</span>[형용사] (고려판단이) 비교상의, 상대적인; (...과) 관련지은, (...에) 따라서 본 [명사] 친천; 동족, 동류</dt>
+					<dt class="quiz-q"><span class="item-date">11.18(수)</span>
+						I seem to have <button type="button" class="i-blank" aria-label="해석 힌트 보기"></button>(+ed) a lot of books.
+						<div class="item-translate">내가 책을 많이 모은 것 같다.</div>
+					</dt>
 					<dd class="quiz-a">
-						<input type="text" placeholder="oooooooo" autocomplete="off" data-answer="relative" data-hint="">
+						<input type="text" placeholder="" autocomplete="off" data-answer="accumulate" data-hint="">
 						<div class="quiz-hint">
 						</div>
 					</dd>
 				</dl>
+
+				<dl class="quiz">
+					<dt class="quiz-q"><span class="item-date">11.19(목)</span>
+						<button type="button" class="i-blank" aria-label="해석 힌트 보기"></button> drugs / fabrics
+						<div class="item-translate">합성 약물/인조 직물</div>
+					</dt>
+					<dd class="quiz-a">
+						<input type="text" placeholder="" autocomplete="off" data-answer="synthetic" data-hint="">
+						<div class="quiz-hint">
+						</div>
+					</dd>
+				</dl>
+
+				<dl class="quiz">
+					<dt class="quiz-q"><span class="item-date">11.20(금)</span>
+						<button type="button" class="i-blank" aria-label="해석 힌트 보기"></button> drugs / fabrics
+						<div class="item-translate">합성 약물/인조 직물</div>
+					</dt>
+					<dd class="quiz-a">
+						<input type="text" placeholder="" autocomplete="off" data-answer="synthetic" data-hint="">
+						<div class="quiz-hint">
+						</div>
+					</dd>
+				</dl>
+
+				<dl class="quiz">
+					<dt class="quiz-q"><span class="item-date">11.21(토)</span>
+						He bought extra food in <button type="button" class="i-blank" aria-label="해석 힌트 보기"></button> of more people coming than he’d invited.
+						<div class="item-translate">그는 자기가 초대한 사람들보다 더 많은 사람들이 올 것을 예상하고 식품을 추가로 샀다.</div>
+					</dt>
+					<dd class="quiz-a">
+						<input type="text" placeholder="" autocomplete="off" data-answer="anticipation" data-hint="">
+						<div class="quiz-hint">
+						</div>
+					</dd>
+				</dl>
+
+				<dl class="quiz">
+					<dt class="quiz-q"><span class="item-date">11.22(일)</span>
+						an <button type="button" class="i-blank" aria-label="해석 힌트 보기"></button> word/term/statement
+						<div class="item-translate">애매모호한 단어/용어/진술</div>
+					</dt>
+					<dd class="quiz-a">
+						<input type="text" placeholder="" autocomplete="off" data-answer="ambiguous" data-hint="">
+						<div class="quiz-hint">
+						</div>
+					</dd>
+				</dl>
+
+				<dl class="quiz">
+					<dt class="quiz-q"><span class="item-date">11.23(월)</span>
+						Her voice had a strange and thrilling <button type="button" class="i-blank" aria-label="해석 힌트 보기"></button>.
+						<div class="item-translate">그녀의 목소리에는 이상하고 오싹한 울림이 있었다.</div>
+					</dt>
+					<dd class="quiz-a">
+						<input type="text" placeholder="" autocomplete="off" data-answer="resonance" data-hint="">
+						<div class="quiz-hint">
+						</div>
+					</dd>
+				</dl>
+
+				<dl class="quiz">
+					<dt class="quiz-q"><span class="item-date">11.24(화)</span>
+						the <button type="button" class="i-blank" aria-label="해석 힌트 보기"></button> area
+						<div class="item-translate">접수 구역</div>
+					</dt>
+					<dd class="quiz-a">
+						<input type="text" placeholder="" autocomplete="off" data-answer="reception" data-hint="">
+						<div class="quiz-hint">
+						</div>
+					</dd>
+				</dl>
+
+				<dl class="quiz">
+					<dt class="quiz-q"><span class="item-date">11.25(수)</span>
+						a meat <button type="button" class="i-blank" aria-label="해석 힌트 보기"></button>
+						<div class="item-translate">고기 대용품</div>
+					</dt>
+					<dd class="quiz-a">
+						<input type="text" placeholder="" autocomplete="off" data-answer="substitute" data-hint="">
+						<div class="quiz-hint">
+						</div>
+					</dd>
+				</dl>
+
+				<dl class="quiz">
+					<dt class="quiz-q"><span class="item-date">11.26(목)</span>
+						<button type="button" class="i-blank" aria-label="해석 힌트 보기"></button> to infection
+						<div class="item-translate">감염에 대한 면역력</div>
+					</dt>
+					<dd class="quiz-a">
+						<input type="text" placeholder="" autocomplete="off" data-answer="immunity" data-hint="">
+						<div class="quiz-hint">
+						</div>
+					</dd>
+				</dl>
+
 
 			</section>
 			<button type="button" class="btn-confirm">정답제출</button>
@@ -462,6 +665,23 @@
 	</div>
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 	<script>
+	$(function(){
+		var maskingName = function( strName ){
+			if( strName.length > 2 ){
+				var originName = strName.split( '' );
+				originName.forEach(function(name, i){
+					//if( i === 0 || i === originName.length - 1) return;
+					if( i === 0 ) return;
+					originName[i] = '🙈';
+				});
+				var joinName = originName.join();
+				return joinName.replace( /,/g, '' );
+			} else {
+				var pattern = /.$/;
+				return strName.replace(pattern, '🙈' );
+			}
+		}
+
 		$( '.btn-confirm' ).on('click', function(){
 			var _num = 0,
 				_quiz = $( '.quiz' ).length;
@@ -479,12 +699,32 @@
 			$( '#score' ).text( Math.round( (100 / _quiz ) * _num ) );
 
 			$( 'html, body' ).scrollTop( 0 );
-			
+
 			$( this ).attr( 'disabled', 'disabled' );
-			
+
 			$( '.wrap-btn-fixed' ).show();
 
 		});
+
+		$( '.i-blank' ).on('click', function(){
+			var $tg = $( this ).closest( '.quiz' ).find( '.item-translate' ),
+				$ph = maskingName( $( this ).closest( '.quiz' ).find( '.quiz-a input[type="text"]' ).attr( 'data-answer' ) ),
+				$ip = $( this ).closest( '.quiz' ).find( '.quiz-a input[type="text"]' );
+
+			if( $tg.hasClass( 'act' ) ){
+				return false;
+			} else {
+				$tg.css( 'opacity', '1' );
+				$ip.attr( 'placeholder' , $ph );
+				setTimeout(function(){
+					$tg.css( 'opacity', '0' ).removeClass( 'act' );
+					$ip.attr( 'placeholder' , '' );
+				}, 2000);
+			}
+
+		});
+
+	});
 	</script>
 </body>
 </html>
