@@ -467,7 +467,7 @@
 				_quiz = $( '.quiz' ).length;
 			$( '.quiz-a input:text' ).each(function(){
 				var $this = $( this );
-				if( $.trim( $this.attr( 'data-answer' ) ) !== $.trim( $this.val() ) ){
+				if( $.trim( $this.attr( 'data-answer' ).toLowerCase() ) !== $.trim( $this.val().toLowerCase() ) ){
 					$this.closest( '.quiz' ).addClass( 'incorrect' );
 					$this.next( '.quiz-hint' ).text( $this.attr( 'data-answer' ) );
 				} else {
