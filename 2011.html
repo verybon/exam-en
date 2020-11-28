@@ -719,7 +719,7 @@
 				_quiz = $( '.quiz' ).length;
 			$( '.quiz-a input:text' ).each(function(){
 				var $this = $( this );
-				if( $.trim( $this.attr( 'data-answer' ) ) !== $.trim( $this.val() ) ){
+				if( $.trim( $this.attr( 'data-answer' ).toLowerCase() ) !== $.trim( $this.val().toLowerCase() ) ){
 					$this.closest( '.quiz' ).addClass( 'incorrect' );
 					$this.next( '.quiz-hint' ).text( $this.attr( 'data-answer' ) );
 				} else {
@@ -730,10 +730,13 @@
 
 			/* 점수 */
 			$( '#score' ).text( Math.round( (100 / _quiz ) * _num ) );
+
 			/* 스크롤 위로 */
 			$( 'html, body' ).scrollTop( 0 );
+
 			/* 비활성화 */
 			$( this ).attr( 'disabled', 'disabled' );
+
 			/* 페이지 nav 활성화 */
 			$( '.wrap-btn-fixed' ).addClass( 'act' );
 
